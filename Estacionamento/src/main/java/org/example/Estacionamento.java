@@ -8,7 +8,7 @@ public class Estacionamento {
     private Tarifario tarifario;
 
     public void registrarEntrada(Veiculo carro){
-        //ticketsAbertos.add(carro);
+        //ticketsAbertos.add(carro, LocalDateTime.now());
     }
     public void registrarSaida(){
         //int i=0;
