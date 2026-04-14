@@ -24,6 +24,8 @@ public class Veiculo {
             } else if ((!(this.modelo.isEmpty())) && (this.placa.isEmpty())) {
                 JOptionPane.showMessageDialog(null,"É preciso cadastrar o modelo do veiculo.");
                 erro=true;
+            }else{
+                erro=false
             }
         }while(erro);   
     }
