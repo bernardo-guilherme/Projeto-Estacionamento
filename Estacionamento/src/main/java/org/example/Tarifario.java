@@ -7,8 +7,16 @@ public class Tarifario {
     private double valorSemana;
     private double valorMes;
 
-    public void calcularValor(LocalDateTime totalHoras){
-
+    public double calcularValor(double totalHoras){
+        if(totalHoras<24 && totalHoras>0){
+            return totalHoras*valorHora;
+        } else if (totalHoras>=24 && totalHoras<168) {
+            return totalHoras*valorDiaria;
+        } else if (totalHoras>=168 && totalHoras<720) {
+            return totalHoras*valorSemana;
+        }else{
+            return totalHoras*valorMes;
+        }
     }
 
 }

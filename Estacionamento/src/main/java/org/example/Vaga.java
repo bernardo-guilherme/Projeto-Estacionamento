@@ -5,6 +5,16 @@ public class Vaga {
     private boolean ocupada = false;
     Veiculo veiculoEstacionado;
 
+    public boolean isOcupada() {
+        return ocupada;
+    }
+
+    public Vaga(int numero, boolean ocupada, Veiculo veiculoEstacionado){
+        this.numero=numero;
+        this.ocupada=ocupada;
+        this.veiculoEstacionado=veiculoEstacionado;
+    }
+
     public void estacionar(Veiculo carro){
         if(this.ocupada) {
             System.out.println("A vaga esta ocupada.");

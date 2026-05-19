@@ -5,7 +5,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         int opcao = 0;
-        ArrayList<Veiculo> Veiculos= new ArrayList<>();
+        ArrayList<Estacionamento> estacionamentos = new ArrayList<Estacionamento>();
+        ArrayList<Veiculo> veiculos= new ArrayList<Veiculo>();
         System.out.printf("Teste: ");
         do{
             System.out.println("1. registrar entrada");
@@ -19,7 +20,24 @@ public class Main {
 
             switch (opcao){
                 case 1:
-                    Veiculos.add(new Veiculo());
+                    String placa, modelo;
+                    boolean verificacaoDePlaca;
+                    System.out.print("digite o modelo do seu veiculo: ");
+                    modelo = entrada.nextLine();
+                    System.out.print("digite a placa do seu veiculo");
+                    placa = entrada.nextLine();
+                    if(veiculos.isEmpty()) {
+                        veiculos.add(new Veiculo(placa, modelo));
+                    } else {
+
+
+                        }
+                        if(verificacaoDePlaca){
+                            System.out.println("Nao eh possivel cadastrar o veiculo porque ja existe um veiculo com a placa igual");
+                            placa = "";
+                            modelo = "";
+                        }
+                    }
             }
         }while(opcao !=4);
         System.out.println("Usuario saiu do sistema");
